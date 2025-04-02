@@ -94,23 +94,23 @@ function App() {
       <h1> OffRxMeds Song List Tracker </h1>
 
       <table>
-        <thead>
+        <tr align = "center">
           <th> Song Title </th>
           <th> Artist </th>
           <th> Key </th>
           <th> </th>
           <th> </th>
-        </thead>
-        <tbody>
+        </tr>
+        
         <tr>
           <td>
-            <input type="text" placeholder="Song Title..." onChange={(e) => setTitle(e.target.value)} />
+            <input type="text" placeholder="New Song Title..." onChange={(e) => setTitle(e.target.value)} />
           </td>
           <td>
-            <input type="text" placeholder="Artist..." onChange={(e) => setArtist(e.target.value)} />
+            <input type="text" placeholder="New Artist..." onChange={(e) => setArtist(e.target.value)} />
           </td>
           <td>
-            <input type="text" placeholder="Key..." onChange={(e) => setKey(e.target.value)} />
+            <input type="text" placeholder="New Key..." onChange={(e) => setKey(e.target.value)} />
           </td>
           <td> <button onClick={addSong}> Add song </button> </td>
           <td> </td>
@@ -124,7 +124,6 @@ function App() {
             <td> <button onClick={() => deleteSong(song.id)}> Delete </button> </td>
         </tr>
       ))}
-      </tbody>
     </table>
   </>
   );
